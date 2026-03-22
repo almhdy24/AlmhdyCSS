@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlmhdyCSS Demo Page</title>
+  <link rel="stylesheet" href="almhdycss.css">
+  <style>
+    section { padding: 4rem 0; border-bottom: 1px solid #eee; }
+    body.dark-mode section { border-bottom-color: #333; }
+    .demo-box { 
+      background: #f4f4f4; 
+      border: 1px solid #ddd; 
+      padding: 1.5rem; 
+      text-align: center;
+      border-radius: 4px;
+    }
+    body.dark-mode .demo-box {
+      background: #1a1a1a;
+      border-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container d-flex justify-between align-center">
+      <a href="#" class="navbar-brand">AlmhdyCSS</a>
+      <ul class="nav-links">
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li>
+          <button onclick="document.body.classList.toggle('dark-mode')" class="btn btn-outline" style="padding: 0.3rem 0.7rem; font-size: 0.8rem;">Switch Mode</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="p-3 text-center" style="background: #fafafa; border-bottom: 1px solid #eee;">
+    <div class="container">
+      <h1 class="mb-1">AlmhdyCSS Framework</h1>
+      <p>Simple and lightweight CSS for clean web interfaces.</p>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section id="grid">
+      <h2 class="mb-2">Grid System</h2>
+      <p class="mb-2">Check the 12-column layout on different screen sizes.</p>
+      <div class="row">
+        <div class="col col-12 mb-1"><div class="demo-box">Full Width (col-12)</div></div>
+        <div class="col col-6 sm-col-12 mb-1"><div class="demo-box">Half Width (col-6)</div></div>
+        <div class="col col-6 sm-col-12 mb-1"><div class="demo-box">Half Width (col-6)</div></div>
+        <div class="col col-4 sm-col-6 xs-col-12 mb-1"><div class="demo-box">One Third (col-4)</div></div>
+        <div class="col col-4 sm-col-6 xs-col-12 mb-1"><div class="demo-box">One Third (col-4)</div></div>
+        <div class="col col-4 sm-col-12 mb-1"><div class="demo-box">One Third (col-4)</div></div>
+      </div>
+    </section>
+
+    <section id="buttons">
+      <h2 class="mb-2">Buttons</h2>
+      <div class="d-flex align-center" style="gap: 15px;">
+        <button class="btn btn-primary">Primary Action</button>
+        <button class="btn btn-outline">Outline Action</button>
+        <button class="btn btn-primary" disabled style="opacity: 0.6; cursor: not-allowed;">Disabled</button>
+      </div>
+    </section>
+
+    <section id="forms">
+      <h2 class="mb-2">Forms</h2>
+      <div class="row">
+        <div class="col col-6 sm-col-12">
+          <label class="mb-1">User Name</label>
+          <input type="text" placeholder="Enter your name">
+
+          <label class="mb-1">Email Address</label>
+          <input type="email" placeholder="Enter your email">
+
+          <label class="mb-1">Subject</label>
+          <select>
+            <option>General Inquiry</option>
+            <option>Technical Support</option>
+            <option>Feedback</option>
+          </select>
+
+          <label class="mb-1">Message</label>
+          <textarea rows="5" placeholder="Write your message here"></textarea>
+
+          <button class="btn btn-primary">Submit Form</button>
+        </div>
+
+        <div class="col col-6 sm-col-12">
+          <div class="p-3" style="background: #f0f8ff; border: 1px dashed #007bff; border-radius: 4px;">
+            <h4>Note</h4>
+            <p>All form fields are 100% width to work well on mobile screens.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="utilities">
+      <h2 class="mb-2">Utilities</h2>
+      <div class="mb-1 p-2 text-center demo-box">Text Center</div>
+      <div class="mb-1 p-2 text-right demo-box">Text Right</div>
+      <div class="p-2 d-flex justify-between demo-box">
+        <span>Start</span>
+        <span>Center</span>
+        <span>End</span>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="p-3 text-center">
+    <hr class="mb-2" style="border: 0; border-top: 1px solid #eee;">
+    <p>AlmhdyCSS - Developed by Almahdi</p>
+  </footer>
+
+</body>
+</html>
